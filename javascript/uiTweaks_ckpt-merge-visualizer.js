@@ -9,8 +9,8 @@ function onChangeValue(){
     let div_mdl_b = gradioApp().querySelector("#div_mdl_size_b");
     let div_mdl_c = gradioApp().querySelector("#div_mdl_size_c");
 
-    let is_WS = gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[2].checked;
-    let is_AD = gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[3].checked;
+    let is_WS = gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[3].checked;
+    let is_AD = gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[4].checked;
 
     // weighted_sum,    A*M + B*(1-M)
     // add_differencef, A + (B-C)*M
@@ -94,5 +94,6 @@ onUiUpdate(function () {
     gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[1].addEventListener("change", onChangeValue);
     gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[2].addEventListener("change", onChangeValue);
     gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[3].addEventListener("change", onChangeValue);
+    gradioApp().querySelector("#tab_modelmerger > div > div > div").querySelectorAll("input")[4].addEventListener("change", onChangeValue);
 
 });
